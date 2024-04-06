@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Person person = context.getBean("per", Person.class);
+		Person person = context.getBean("per_setter", Person.class);
 		person.display();
 	}
 }
