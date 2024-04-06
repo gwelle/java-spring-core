@@ -8,6 +8,22 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
 	<!-- injection de dependance via les setters  -->
+	<bean id="per_address" class="org.eclipse.model.Address">
+		
+		<property name="street">
+			<value>paradis</value>
+		</property>
+		
+		<property name="zipCode">
+			<value>13015</value>
+		</property>
+		
+		<property name="city">
+			<value>Marseille</value>
+		</property>
+		
+	</bean>
+	
 	<bean id="per_setter" class="org.eclipse.model.Person">
 		<property name="id">
 			<value>1</value>
@@ -21,5 +37,15 @@
 			<value>WELLE</value>
 		</property>
 		
+		<property name="sports">
+			<list>
+				<value>Football</value>
+				<value>Wrestling</value>
+				<value>Boxing</value>
+			</list>
+		</property>
+		
+		<property name="address" ref="per_address"/>
 	</bean>
+	
 </beans>

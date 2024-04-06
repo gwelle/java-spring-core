@@ -51,6 +51,9 @@ public class Person {
 	}
 
 	public void display() {
-		System.out.println(id + " " + firstName + " " + lastName);
+		System.out.println(id + " " + firstName + " " + lastName + " " + address.getStreet() + " "
+				+ address.getZipCode() + " " + address.getCity() + " \n");
+		System.out.println("My sports : ");
+		sports.forEach(System.out::println);
 	}
 }
