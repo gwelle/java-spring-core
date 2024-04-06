@@ -9,10 +9,21 @@
 	
 	
 	<!-- injection de dependance via le constructeur  -->
+	
+	<bean id="address" class="org.eclipse.model.Address">
+		<constructor-arg value="paradis"></constructor-arg>
+		<constructor-arg value="13015"></constructor-arg>
+		<constructor-arg value="Marseille"></constructor-arg>
+	</bean>
+	
 	<bean id="per" class="org.eclipse.model.Person">
 		<constructor-arg value="31" type="int"></constructor-arg>
 		<constructor-arg value="Guillaume" type="String"></constructor-arg>
 		<constructor-arg value="WELLE" type="String"></constructor-arg>
+		<constructor-arg><ref bean="address"/></constructor-arg>
 	</bean>
+
+	
+	
 
 </beans>
