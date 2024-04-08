@@ -1,16 +1,14 @@
 package org.eclipse.main;
 
-import org.eclipse.language.Language;
+import org.eclipse.configuration.ApplicationConfig;
+import org.eclipse.model.Person;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		// Person p = (Person) context.getBean("p");
-		// p.drive();
-
-		Language f = (Language) context.getBean("lang");
-		f.direBonjour();
+		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		Person person = context.getBean("person", Person.class);
+		person.display();
 	}
 }
