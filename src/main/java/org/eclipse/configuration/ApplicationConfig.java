@@ -3,9 +3,11 @@ package org.eclipse.configuration;
 import org.eclipse.model.Address;
 import org.eclipse.model.Person;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration // ApplicationConfig est définie comme une classe de configuration
+@ComponentScan("org.eclipse.nation") // on indique ApplicationConfig l’emplacement de nos composants
 public class ApplicationConfig {
 
 	@Bean
