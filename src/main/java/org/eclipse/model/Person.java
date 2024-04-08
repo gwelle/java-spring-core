@@ -18,6 +18,12 @@ public class Person {
 		this.lastName = lastName;
 	}
 
+	public Person(String firstName, String lastName, Address address) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -59,7 +65,8 @@ public class Person {
 	}
 
 	public void display() {
-		System.out.println(firstName + " " + lastName);
+		System.out.println(firstName + " " + lastName + " " + address.getStreet() + " " + address.getZipCode() + " "
+				+ address.getCity());
 	}
 
 }
