@@ -2,7 +2,7 @@ package org.eclipse.nation;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("eng")
 public class English implements European {
 
 	@Override

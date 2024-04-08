@@ -11,7 +11,7 @@
 	http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<!-- Indique l'emplacement de beans -->
-	<context:component-scan base-package="org.eclipse.nation" ></context:component-scan>
+	<context:component-scan base-package="org.eclipse.nation, org.eclipse.language" ></context:component-scan>
 	
 	<!-- injection de dependance via les setters  -->
 	<bean id="per_address" class="org.eclipse.model.Address">
@@ -30,6 +30,7 @@
 		
 	</bean>
 	
+	<!--  
 	<bean id="per_setter" class="org.eclipse.model.Person">
 		<property name="id">
 			<value>1</value>
@@ -53,5 +54,7 @@
 		
 		<property name="address" ref="per_address"/>
 	</bean>
+	
+	-->
 		
 </beans>

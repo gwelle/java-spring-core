@@ -2,7 +2,7 @@ package org.eclipse.nation;
 
 import org.springframework.stereotype.Component;
 
-@Component // Décorateur pour déclarer un bean
+@Component("fra") // Décorateur pour déclarer un bean
 public class French implements European {
 
 	@Override
