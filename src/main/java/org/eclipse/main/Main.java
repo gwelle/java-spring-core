@@ -1,6 +1,6 @@
 package org.eclipse.main;
 
-import org.eclipse.model.Person;
+import org.eclipse.nation.European;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,7 +11,7 @@ public class Main {
 
 		// Utilisation de l’usine de bean dans le main
 		BeanFactory factory = context;
-		Person person = (Person) factory.getBean("per_setter");
-		person.display();
+		European e = (European) context.getBean("french");
+		e.saluer();
 	}
 }
